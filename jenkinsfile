@@ -14,6 +14,7 @@ pipeline {
 
         stage('Run tests') {
             steps {
+
                 script {
                     if (isUnix()) {
                         sh "mvn clean test -Dcucumber.filter.tags=${params.TEST_TYPE} -DBROWSER=${params.BROWSER}"

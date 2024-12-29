@@ -36,8 +36,10 @@ public class PracticePage {
 
     public void login() {
 
-        String username = ConfigurationReader.getProperty("username");
-        String password = ConfigurationReader.getProperty("password");
+        //String username = ConfigurationReader.getProperty("username");
+        String username=System.getenv("USERNAME");
+        //String password = ConfigurationReader.getProperty("password");
+        String password=System.getenv("PASSWORD");
 
         usernameEl.sendKeys(username);
         passwordEl.sendKeys(password);
